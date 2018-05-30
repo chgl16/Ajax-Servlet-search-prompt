@@ -1,15 +1,5 @@
-# JavaWeb Demo
-一个JavaWeb骨架基本案例
+# Ajax-Servlet 搜索智能提示
 
-maven
-tomcat
-ajax
-jsp
-html
-css
-javascript
-servlet
-structs
-spring
-mybatis
+maven 构建
 
+客户端通过ajax将搜索框的输入（关键词）以请求的方式发送到服务器，服务器端后台servlet获取改关键词，并检索到相依的关联信息，通过json格式发送回给客户端，客户端再通过ajax的回调函数获取这些数据，转化显示。
