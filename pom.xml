@@ -26,6 +26,24 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>4.0.1</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/net.sf.json-lib/json-lib -->
+    <dependency>
+      <groupId>net.sf.json-lib</groupId>
+      <artifactId>json-lib</artifactId>
+      <version>2.4</version>
+      <classifier>jdk15</classifier>
+      <!-- 经过搜索资料发现是因为json-lib库有两个jdk版本的实现，json-lib-2.1-jdk13.jar和json-lib-2.1-jdk15.jar，需要加上描述符即可。-->
+    </dependency>
+
+
   </dependencies>
 
   <build>

@@ -1,0 +1,42 @@
+<!-- 不使用jsp了，直接使用html + ajax + servlet开发　-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>webDemo1</title>
+    <meta content="text/html" charset="utf-8" />
+    <meta name="author" content="Lin" />
+    <meta name="description" content="webDemo1" />
+    <meta name="keywords" content="ajax,jsp,maven web" />
+    <script src="scripts/index-ajax.js"></script>  <!-- 引入ajax -->
+
+    <link rel="stylesheet" type="text/css" href="styles/main.css" /> <!-- 引入 css 单标签元素　是rel不是ref -->
+
+</head>
+<body>
+<!-- ajax从服务器文本获取数据　-->
+<div id="hello">Hello World!</div>
+<!-- in1 是ｉｎｐｕｔ标签，没有innerHTML -->
+<input type="button" id="change" name="change" value="改变" onclick="change()" />
+<hr/>
+<hr/>
+
+<!-- 搜索框自能提示，ajax发送数据到服务器，服务器响应给js -->
+<div id="search_block">
+    <input type="text"  id="search"  placeholder="输入搜索内容..." onkeyup="getMoreContents()" onblur="searchOnBlur()" onfocus="getMoreContents()"/>   <!-- placeholder属性是提示输入内容-->
+    &nbsp;&nbsp; <!-- onblur()设置失去焦点（点击非输入框的其他地方时）删除提示信息。 onfocus()是重新获得焦点，继续获取信息 -->
+    <button type="button" id="mybutton">搜 索</button>
+    <div id="popDiv">
+        <table  id="content_table" bgcolor="#FFFAFA" border="0" cellspacing="0" cellpadding="0">
+            <tbody id="content_table_body">
+                <!-- td tr由js生成　-->
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+</body>
+
+</html>
